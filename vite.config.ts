@@ -6,6 +6,9 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     base: '/matrix/',
+    build: {
+      outDir: 'docs', // توجيه مخرجات الـ build لفولدر docs مباشرة بدلاً من dist
+    },
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
