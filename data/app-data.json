@@ -1,133 +1,459 @@
 {
-  "version": "1.0",
-  "lastUpdated": "2026-08-26T08:50:00.000Z",
   "goals": [
     {
-      "id": "g-1",
-      "title": "تعلم مهارة جديدة",
+      "id": "goal-1787766886037",
+      "title": "تحقيق علي الاقل 4000 جنية",
       "color": "#8b5cf6",
       "glowColor": "rgba(139, 92, 246, 0.4)",
-      "month": "September",
       "steps": [
-        { "id": "s1-1", "text": "إنهاء قراءة الفصل الأول", "completed": false, "order": 1 },
-        { "id": "s1-2", "text": "تلخيص أهم النقاط", "completed": false, "order": 2 },
-        { "id": "s1-3", "text": "مراجعة الملاحظات وتدوين الأسئلة", "completed": false, "order": 3 },
-        { "id": "s1-4", "text": "حل الاختبار الذاتي الأول", "completed": false, "order": 4 },
-        { "id": "s1-5", "text": "مشاركة الملخص مع الصديق", "completed": false, "order": 5 },
-        { "id": "s1-6", "text": "إعداد خطة الفصل الثاني", "completed": false, "order": 6 },
-        { "id": "s1-7", "text": "إنهاء قراءة الفصل الثاني", "completed": false, "order": 7 },
-        { "id": "s1-8", "text": "حل الاختبار الذاتي الثاني", "completed": false, "order": 8 }
-      ]
-    },
-    {
-      "id": "g-2",
-      "title": "تطوير موقع شخصي",
-      "color": "#ec4899",
-      "glowColor": "rgba(236, 72, 153, 0.4)",
-      "month": "September",
-      "steps": [
-        { "id": "s2-1", "text": "شراء الدومين والاستضافة", "completed": false, "order": 1 },
-        { "id": "s2-2", "text": "تصميم الواجهة في فيجما", "completed": false, "order": 2 },
-        { "id": "s2-3", "text": "برمجة الصفحة الرئيسية", "completed": false, "order": 3 },
-        { "id": "s2-4", "text": "برمجة صفحة من أنا ومعرض الأعمال", "completed": false, "order": 4 },
-        { "id": "s2-5", "text": "إضافة نموذج التواصل وربط البريد", "completed": false, "order": 5 },
-        { "id": "s2-6", "text": "تجربة الموقع على الهواتف", "completed": false, "order": 6 },
-        { "id": "s2-7", "text": "تحسين سرعة الموقع ومحركات البحث", "completed": false, "order": 7 },
-        { "id": "s2-8", "text": "نشر الموقع رسمياً على الإنترنت", "completed": false, "order": 8 }
-      ]
-    },
-    {
-      "id": "g-3",
-      "title": "تحسين اللياقة البدنية",
-      "color": "#22c55e",
-      "glowColor": "rgba(34, 197, 94, 0.4)",
-      "month": "September",
-      "steps": [
-        { "id": "s3-1", "text": "الاشتراك في النادي الرياضي", "completed": false, "order": 1 },
-        { "id": "s3-2", "text": "تحديد جدول التمارين الأسبوعي", "completed": false, "order": 2 },
-        { "id": "s3-3", "text": "الالتزام بـ 4 أيام تمرين بالأسبوع", "completed": false, "order": 3 },
-        { "id": "s3-4", "text": "شرب 3 لتر ماء يومياً بانتظام", "completed": false, "order": 4 },
-        { "id": "s3-5", "text": "الامتناع عن السكريات والمشروبات الغازية", "completed": false, "order": 5 },
-        { "id": "s3-6", "text": "المشي 10,000 خطوة يومياً", "completed": false, "order": 6 },
-        { "id": "s3-7", "text": "قياس الوزن ونسبة الدهون كل أسبوعين", "completed": false, "order": 7 },
-        { "id": "s3-8", "text": "النوم المبكر لمدة 8 ساعات", "completed": false, "order": 8 }
-      ]
-    },
-    {
-      "id": "g-4",
-      "title": "تطوير قناة اليوتيوب",
-      "color": "#eab308",
-      "glowColor": "rgba(234, 179, 8, 0.4)",
-      "month": "September",
-      "steps": [
-        { "id": "s4-1", "text": "تحديد أفكار 4 فيديوهات للشهر", "completed": false, "order": 1 },
-        { "id": "s4-2", "text": "كتابة سكربت الفيديو الأول", "completed": false, "order": 2 },
-        { "id": "s4-3", "text": "تصوير وتسجيل الفيديو الأول", "completed": false, "order": 3 },
-        { "id": "s4-4", "text": "مونتاج الفيديو الأول وتجهيزه", "completed": false, "order": 4 },
-        { "id": "s4-5", "text": "تصميم الصورة المصغرة الجذابة", "completed": false, "order": 5 },
-        { "id": "s4-6", "text": "نشر الفيديو وتحسين الكلمات المفتاحية", "completed": false, "order": 6 },
-        { "id": "s4-7", "text": "تصوير ومونتاج الفيديو الثاني", "completed": false, "order": 7 },
-        { "id": "s4-8", "text": "التفاعل والرد على كل التعليقات", "completed": false, "order": 8 }
-      ]
-    },
-    {
-      "id": "g-5",
-      "title": "تنظيم المصاريف والادخار",
-      "color": "#10b981",
-      "glowColor": "rgba(16, 185, 129, 0.4)",
-      "month": "September",
-      "steps": [
-        { "id": "s5-1", "text": "تسجيل كافة المصاريف الثابتة", "completed": false, "order": 1 },
-        { "id": "s5-2", "text": "تحديد ميزانية الأكل والتسوق", "completed": false, "order": 2 },
-        { "id": "s5-3", "text": "ادخار 20% من الراتب فور استلامه", "completed": false, "order": 3 },
-        { "id": "s5-4", "text": "إلغاء الاشتراكات الشهرية غير الضرورية", "completed": false, "order": 4 },
-        { "id": "s5-5", "text": "البحث عن فرص استثمارية صغيرة", "completed": false, "order": 5 },
-        { "id": "s5-6", "text": "شراء الأساسيات فقط خلال هذا الشهر", "completed": false, "order": 6 },
-        { "id": "s5-7", "text": "مراجعة الميزانية بنهاية كل أسبوع", "completed": false, "order": 7 },
-        { "id": "s5-8", "text": "إعداد تقرير مالي لنهاية الشهر", "completed": false, "order": 8 }
-      ]
-    },
-    {
-      "id": "g-6",
-      "title": "قراءة كتابين",
-      "color": "#06b6d4",
-      "glowColor": "rgba(6, 182, 212, 0.4)",
-      "month": "September",
-      "steps": [
-        { "id": "s6-1", "text": "اختيار الكتابين وشرائهما", "completed": false, "order": 1 },
-        { "id": "s6-2", "text": "قراءة 20 صفحة يومياً من الكتاب الأول", "completed": false, "order": 2 },
-        { "id": "s6-3", "text": "تدوين الاقتباسات والأفكار المميزة", "completed": false, "order": 3 },
-        { "id": "s6-4", "text": "إنهاء الكتاب الأول وكتابة مراجعة عنه", "completed": false, "order": 4 },
-        { "id": "s6-5", "text": "البدء بقراءة الكتاب الثاني", "completed": false, "order": 5 },
-        { "id": "s6-6", "text": "قراءة 20 صفحة يومياً من الكتاب الثاني", "completed": false, "order": 6 },
-        { "id": "s6-7", "text": "إنهاء الكتاب الثاني كاملاً", "completed": false, "order": 7 },
-        { "id": "s6-8", "text": "تطبيق فكرة عملية واحدة من كل كتاب", "completed": false, "order": 8 }
-      ]
+        {
+          "id": "step-1787766970984-6yif",
+          "text": "العمل 6 ايام",
+          "completed": false,
+          "order": 1
+        },
+        {
+          "id": "step-1787766978072-ex1e",
+          "text": "العمل 6 ايام",
+          "completed": false,
+          "order": 2
+        },
+        {
+          "id": "step-1787766998627-bwll",
+          "text": "استلام المرتب",
+          "completed": false,
+          "order": 3
+        }
+      ],
+      "month": "September"
     }
   ],
-  "tasksByDate": {},
+  "tasksByDate": {
+    "2026-08-26": [
+      {
+        "id": "task-1787765852694-yln4",
+        "text": "حل اسايمنت البحتة",
+        "completed": false,
+        "color": "#34d399",
+        "order": 1
+      }
+    ],
+    "2026-08-27": [
+      {
+        "id": "task-1787765861561-l1h2",
+        "text": "حل اسايمنت البحتة",
+        "completed": false,
+        "color": "#38bdf8",
+        "order": 1
+      },
+      {
+        "id": "task-1787765867463-1nga",
+        "text": "تسليم اسايمنت البحتة",
+        "completed": false,
+        "color": "#38bdf8",
+        "order": 2
+      }
+    ],
+    "2026-08-28": [
+      {
+        "id": "task-1787765886261-zurx",
+        "text": "عمل بحث العسكرية",
+        "completed": false,
+        "color": "#818cf8",
+        "order": 1
+      }
+    ],
+    "2026-08-29": [
+      {
+        "id": "task-1787765906338-amys",
+        "text": "عمل بحث العسكرية",
+        "completed": false,
+        "color": "#f472b6",
+        "order": 1
+      }
+    ],
+    "2026-08-30": [
+      {
+        "id": "task-1787765915052-qn4u",
+        "text": "تسليم بحث العسكرية",
+        "completed": false,
+        "color": "#f87171",
+        "order": 1
+      }
+    ],
+    "2026-08-31": [
+      {
+        "id": "task-1787766025912-up03",
+        "text": "مراجعة البحتة",
+        "completed": false,
+        "color": "#4ade80",
+        "order": 1
+      }
+    ],
+    "2026-09-01": [
+      {
+        "id": "task-1787766310591-25xt",
+        "text": "مراجعة لامتحان البحتة",
+        "completed": false,
+        "color": "#facc15",
+        "order": 1
+      }
+    ],
+    "2026-09-02": [
+      {
+        "id": "task-1787766317737-l1be",
+        "text": "مراجعة لامتحان البحتة",
+        "completed": false,
+        "color": "#34d399",
+        "order": 1
+      }
+    ],
+    "2026-09-03": [
+      {
+        "id": "task-1787766357783-n5re",
+        "text": "امتحان البحتة",
+        "completed": false,
+        "color": "#38bdf8",
+        "order": 1
+      },
+      {
+        "id": "task-1787766364428-is37",
+        "text": "امتحان العسكرية",
+        "completed": false,
+        "color": "#38bdf8",
+        "order": 2
+      }
+    ]
+  },
   "habitsData": {
     "month": "September",
     "lastCalendarDate": "2026-08-26",
     "habits": [
-      { "id": "h-1", "title": "بدء العمل الساعة 6 صباحاً", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-2", "title": "أذكار الصباح", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-3", "title": "الرد السريع على الإيميلات", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-4", "title": "التفاعل مع المتابعين", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-5", "title": "استماع لبودكاست تعليمي", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-6", "title": "قراءة 20 صفحة من كتاب", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-7", "title": "ممارسة الرياضة 45 دقيقة", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-8", "title": "شرب 3 لتر ماء", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-9", "title": "تدوين اليوميات والامتنان", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-10", "title": "جلسة تأمل وتنفس عميق", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-11", "title": "الامتناع عن السكريات", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-12", "title": "تعلم كلمات إنجليزية جديدة", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-13", "title": "ترتيب وتنظيف المكتب", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-14", "title": "النوم قبل الساعة 11 مساءً", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] },
-      { "id": "h-15", "title": "عدم استخدام الهاتف قبل النوم", "target": 30, "checks": [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false] }
+      {
+        "id": "habit-1787765222038",
+        "title": "الفجر في وقته",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765241939",
+        "title": "استحمام",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765273632",
+        "title": "اذكار الصباح",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765297644",
+        "title": "الدراسة 5 ساعات",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765342942",
+        "title": "سماع سورة مرة علي الاقل",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765415838",
+        "title": "اذكار المساء",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      },
+      {
+        "id": "habit-1787765698813",
+        "title": "تعلم 26 كلمة جديدة إنجليزية",
+        "target": 30,
+        "checks": [
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      }
     ],
-    "sleepHours": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-    "sleepQuality": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    "sleepHours": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "sleepQuality": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
-  "soundEnabled": true
+  "soundEnabled": true,
+  "lastSaved": "2026-08-26T18:58:25.690Z"
 }
