@@ -1,0 +1,8 @@
+{
+  "name": "Remix منظومة الإنجاز والإنتاجية | Productivity Matrix",
+  "description": "نظام تفاعلي متكامل لتتبع الأهداف الشهرية، العادات اليومية، والمهام الأسبوعية مع إحصائيات ونسب إنجاز حية ورسوم بيانية دقيقة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
