@@ -70,7 +70,7 @@ export const AddGoalModal: React.FC<AddGoalModalProps> = ({
         <div className="bg-[#162044] p-4 border-b border-[#233160] flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Target className="w-5 h-5 text-violet-400" />
-            <h3 className="text-base font-bold text-white">إضافة هدف شهري جديد</h3>
+            <h3 className="text-base font-bold text-white">إضافة هدف جديد</h3>
           </div>
           <button onClick={onClose} className="text-slate-400 hover:text-white p-1">
             <X className="w-5 h-5" />

@@ -176,7 +176,7 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
     : dynamicDays;
 
   // Mini Chart data
-  const reversedDaysForChart = [...dynamicDays].reverse();
+  const daysForChart = [...dynamicDays];
 
   return (
     <div className="w-full max-w-[1680px] mx-auto p-3 sm:p-6 space-y-5">
@@ -327,43 +327,55 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
 
         {/* Scrollable Progress Chart on Mobile */}
         <div className="overflow-x-auto pb-2 scrollbar-none touch-pan-x">
-          <div className="flex items-end justify-around gap-3 sm:gap-6 h-28 pt-4 px-2 sm:px-6 min-w-[560px] sm:min-w-full">
-            {reversedDaysForChart.map((d, index) => {
+          <div className="flex items-end justify-around gap-10 h-44 pt-3 px-1 sm:px-4 min-w-[480px] sm:min-w-full">
+            {daysForChart.map((d, index) => {
               const completedCount = d.tasks.filter((t) => t.completed).length;
               const totalCount = d.tasks.length;
-              const realIdx = 6 - index;
+              const realIdx = index;
               const dayColor = DAY_COLORS[realIdx % DAY_COLORS.length];
-              const heightPercent = totalCount > 0 ? Math.max(15, (completedCount / Math.max(8, totalCount)) * 100) : 10;
+              const heightPercent = totalCount > 0 ? Math.min(100, Math.round((completedCount / totalCount) * 100)) : 0;
               const isDaySelected = selectedDayIndex === realIdx;
+              const isComplete = totalCount > 0 && completedCount === totalCount;
 
               return (
                 <div
                   key={d.dateKey}
                   onClick={() => setSelectedDayIndex(realIdx)}
-                  className={`flex flex-col items-center flex-1 max-w-[120px] cursor-pointer rounded-xl p-2 transition-all duration-200 ${
+                  className={`flex flex-col items-center flex-1 max-w-[105px] cursor-pointer rounded-lg p-1.5 transition-all duration-200 ${
                     isDaySelected 
                       ? 'bg-[#1c2852] ring-2 ring-blue-400 shadow-lg shadow-blue-950/50 -translate-y-1' 
                       : 'hover:bg-[#162044] hover:-translate-y-0.5'
                   }`}
                 >
                   {/* Number Badge with Percentage */}
-                  <div className="flex items-center gap-1 mb-1.5">
-                    <span className="text-xs sm:text-sm font-mono-num font-bold text-white">
-                      {completedCount}
-                    </span>
-                    <span className="text-[10px] text-slate-400 font-mono-num">
-                      /{totalCount}
-                    </span>
+                  <div className="flex flex-col items-center justify-center h-9 mb-2 shrink-0 leading-none">
+                    <div className="flex items-center justify-center gap-1">
+                      <span className="text-sm font-mono-num font-bold text-white leading-none">
+                        {completedCount}
+                      </span>
+                      <span className="text-[10px] text-slate-400 font-mono-num leading-none">
+                        /{totalCount}
+                      </span>
+                    </div>
+                    {totalCount > 0 && (
+                      <span
+                        className="text-[10px] font-mono-num font-bold mt-0.5 leading-none"
+                        style={{ color: dayColor }}
+                      >
+                        {heightPercent}%
+                      </span>
+                    )}
                   </div>
 
-                  {/* Vertical Bar with ample height and rounded aesthetics */}
-                  <div className="w-full bg-[#172248] rounded-md h-12 flex items-end p-0.5 border border-[#223363]">
+                  {/* Vertical Bar with fixed track height and rounded fill */}
+                  <div className="w-full bg-[#16203f] rounded-lg h-20 flex items-end p-1 border border-[#223363] overflow-hidden">
                     <div
-                      className="w-full transition-all duration-500 rounded-sm shadow-sm"
+                      className="w-full transition-all duration-500 rounded-md"
                       style={{
                         height: `${heightPercent}%`,
-                        backgroundColor: dayColor,
-                        boxShadow: `0 0 10px ${dayColor}40`,
+                        minHeight: heightPercent > 0 ? '6px' : '0px',
+                        background: `linear-gradient(180deg, ${dayColor} 0%, ${dayColor}cc 100%)`,
+                        boxShadow: isComplete ? `0 0 14px ${dayColor}` : `0 0 8px ${dayColor}40`,
                       }}
                     />
                   </div>

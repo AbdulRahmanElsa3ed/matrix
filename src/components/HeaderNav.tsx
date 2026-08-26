@@ -14,7 +14,6 @@ interface HeaderNavProps {
   onExportData: () => void;
   onImportData: (file: File) => void;
   onResetData: () => void;
-  saveStatus?: 'saved' | 'saving' | 'error' | 'idle';
 }
 
 export const HeaderNav: React.FC<HeaderNavProps> = React.memo(({
@@ -29,7 +28,6 @@ export const HeaderNav: React.FC<HeaderNavProps> = React.memo(({
   onExportData,
   onImportData,
   onResetData,
-  saveStatus = 'saved',
 }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -208,35 +206,8 @@ export const HeaderNav: React.FC<HeaderNavProps> = React.memo(({
           </button>
         </div>
 
-        {/* Right Side: Quick Action Buttons & Auto-Save Indicator */}
+        {/* Right Side: Quick Action Buttons */}
         <div className="flex items-center gap-2 sm:gap-3 w-full md:w-auto justify-end">
-          {/* Live JSON Persistence Indicator */}
-          <div
-            className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-[#131b38] border border-[#233160] text-[11px] font-semibold text-slate-300 shadow-inner"
-            title="يتم حفظ أي تعديل تجريه تلقائياً في ملف data/app-data.json بالمشروع"
-          >
-            <span
-              className={`w-2 h-2 rounded-full transition-all ${
-                saveStatus === 'saving'
-                  ? 'bg-amber-400 scale-125'
-                  : saveStatus === 'error'
-                  ? 'bg-rose-500'
-                  : saveStatus === 'saved'
-                  ? 'bg-emerald-400 scale-110'
-                  : 'bg-emerald-500/70'
-              }`}
-            />
-            <span className="text-slate-300">
-              {saveStatus === 'saving'
-                ? 'جارِ الحفظ...'
-                : saveStatus === 'saved'
-                ? 'تم الحفظ في JSON'
-                : saveStatus === 'error'
-                ? 'فشل الحفظ'
-                : 'ملف JSON متصل'}
-            </span>
-          </div>
-
           {/* Add Item Button */}
           <button
             onClick={onOpenAddModal}

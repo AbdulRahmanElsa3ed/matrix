@@ -130,7 +130,6 @@ export default function App() {
     }
   });
 
-  const [saveStatus, setSaveStatus] = useState<'saved' | 'saving' | 'error' | 'idle'>('idle');
   const isInitialLoadedRef = useRef(false);
   const lastSavedSnapshotRef = useRef<string>('');
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -209,8 +208,6 @@ export default function App() {
       clearTimeout(saveTimeoutRef.current);
     }
 
-    setSaveStatus('saving');
-
     // Debounce server JSON disk write (400ms) to bundle rapid edits smoothly
     saveTimeoutRef.current = setTimeout(async () => {
       const success = await saveServerData({
@@ -222,12 +219,6 @@ export default function App() {
 
       if (success) {
         lastSavedSnapshotRef.current = currentSnapshot;
-        setSaveStatus('saved');
-        setTimeout(() => {
-          setSaveStatus((prev) => (prev === 'saved' ? 'idle' : prev));
-        }, 2000);
-      } else {
-        setSaveStatus('error');
       }
     }, 400);
 
@@ -510,7 +501,6 @@ export default function App() {
         onExportData={handleExportData}
         onImportData={handleImportData}
         onResetData={handleOpenResetModal}
-        saveStatus={saveStatus}
       />
 
       {/* Main Content Area */}

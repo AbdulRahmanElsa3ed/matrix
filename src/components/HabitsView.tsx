@@ -483,10 +483,6 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
               <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[11px] font-bold">
                 من {firstDay?.dayNum} {firstDay?.monthName} إلى {lastDay?.dayNum} {lastDay?.monthName} (اليوم)
               </span>
-              <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[11px] font-bold flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>اليوم في آخر الأعمدة</span>
-              </span>
             </div>
             <div className="text-[11px] text-slate-400 mt-0.5">
               ترقيم الأيام مستمر تصاعدياً وينتهي باليوم الحالي، مع تصنيف وتجميع الأيام بالأعلى حسب الشهر التابع له.
