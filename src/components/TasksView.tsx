@@ -304,7 +304,7 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
       </div>
 
       {/* 3. Top Mini Daily Bar Chart with Spacious Layout & Horizontal Mobile Scroll */}
-      <div className="bg-[#111938] border border-[#1f2b54] rounded-xl p-4 sm:p-5 shadow-lg">
+      <div className="bg-[#111938] border border-[#1f2b54] rounded-xl p-4 sm:p-5 shadow-lg overflow-hidden">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 pb-2 border-b border-[#1b264a]">
           <div className="flex items-center gap-2.5">
             <span className="text-xs sm:text-sm font-bold text-white tracking-wider bg-blue-500/20 text-blue-300 border border-blue-400/30 px-2.5 py-0.5 rounded-md">
@@ -343,8 +343,8 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
                   onClick={() => setSelectedDayIndex(realIdx)}
                   className={`flex flex-col items-center flex-1 max-w-[105px] cursor-pointer rounded-lg p-1.5 transition-all duration-200 ${
                     isDaySelected 
-                      ? 'bg-[#1c2852] ring-2 ring-blue-400 shadow-lg shadow-blue-950/50 -translate-y-1' 
-                      : 'hover:bg-[#162044] hover:-translate-y-0.5'
+                      ? 'bg-[#1c2852] ring-2 ring-blue-400 shadow-lg shadow-blue-950/50 translate-y-0.5' 
+                      : 'hover:bg-[#162044] hover:translate-y-0.5'
                   }`}
                 >
                   {/* Number Badge with Percentage */}
