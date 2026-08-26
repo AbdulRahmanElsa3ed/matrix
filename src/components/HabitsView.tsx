@@ -48,18 +48,12 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
   const { habits, sleepHours, sleepQuality } = data;
 
   // Selected habits to plot on the Fluctuation & Comparison Graph
-  const [selectedHabitIdsForChart, setSelectedHabitIdsForChart] = useState<string[]>(() => {
-    return habits.slice(0, 3).map((h) => h.id);
-  });
+  const [selectedHabitIdsForChart, setSelectedHabitIdsForChart] = useState<string[]>([]);
 
   // Keep selected habits synchronized if habits are deleted
   useEffect(() => {
     setSelectedHabitIdsForChart((prev) => {
-      const validIds = prev.filter((id) => habits.some((h) => h.id === id));
-      if (validIds.length === 0 && habits.length > 0) {
-        return habits.slice(0, Math.min(3, habits.length)).map((h) => h.id);
-      }
-      return validIds;
+      return prev.filter((id) => habits.some((h) => h.id === id));
     });
   }, [habits]);
 
