@@ -107,7 +107,7 @@ export const GoalsView: React.FC<GoalsViewProps> = React.memo(({
             <Target className="w-8 h-8" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white mb-1">لا توجد أهداف شهرية بعد</h3>
+            <h3 className="text-lg font-bold text-white mb-1">لا توجد أهداف بعد</h3>
             <p className="text-sm text-slate-400 max-w-md mx-auto">
               الأداة جاهزة الآن بحالة نظيفة وصفرية. ابدأ بإضافة أهدافك وخطواتك التنفيذية لبدء التتبع.
             </p>
@@ -117,7 +117,7 @@ export const GoalsView: React.FC<GoalsViewProps> = React.memo(({
             className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white px-6 py-2.5 rounded-xl text-sm font-bold shadow-lg transition"
           >
             <Plus className="w-4 h-4 stroke-[3]" />
-            <span>إضافة أول هدف شهري</span>
+            <span>إضافة أول هدف</span>
           </button>
         </div>
       ) : (
