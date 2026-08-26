@@ -336,12 +336,12 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
   // SVG Spline path for the continuous line chart
   const splinePath = useMemo(() => {
     const width = 1000;
-    const height = 140;
+    const height = 100;
     const len = dailyStats.length;
     if (len < 2) return '';
     const points = dailyStats.map((stat, i) => {
       const x = (i / (len - 1)) * width;
-      const y = height - (stat.percentage / 100) * (height - 30) - 15;
+      const y = height - (stat.percentage / 100) * height;
       return { x, y };
     });
 
@@ -484,15 +484,12 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
                 من {firstDay?.dayNum} {firstDay?.monthName} إلى {lastDay?.dayNum} {lastDay?.monthName} (اليوم)
               </span>
             </div>
-            <div className="text-[11px] text-slate-400 mt-0.5">
-              ترقيم الأيام مستمر تصاعدياً وينتهي باليوم الحالي، مع تصنيف وتجميع الأيام بالأعلى حسب الشهر التابع له.
-            </div>
           </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5 w-full md:w-auto justify-between md:justify-end">
           <div className="bg-[#0b1024] border border-[#1e2b54] px-3 py-1.5 rounded-lg text-center font-mono-num text-xs">
-            <span className="text-slate-400 text-[10px] ml-1.5">نهاية يوم اليوم:</span>
+            <span className="text-slate-400 text-[10px] ml-1.5">نهاية اليوم:</span>
             <span className="font-bold text-cyan-300">{timeLeftToMidnight || 'مستمر'}</span>
           </div>
 
@@ -514,7 +511,7 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
               PROGRESS
             </span>
             <span className="text-xs text-slate-300 font-medium">
-              معدل الإنجاز اليومي خلال آخر 30 يوماً (تنتهي باليوم في اليمين/الآخر)
+              معدل الإنجاز اليومي خلال آخر 30 يوماً
             </span>
           </div>
           <div className="text-xs text-cyan-300 font-medium flex items-center gap-1.5 bg-cyan-950/40 border border-cyan-500/30 px-3 py-1 rounded-lg">
@@ -890,19 +887,20 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
             </span>
           </div>
 
-          <div className="h-32 w-full bg-[#0c1228] rounded-lg p-2 border border-[#1c274c] relative overflow-hidden flex items-center">
-            {/* Horizontal Grid lines */}
-            <div className="absolute inset-0 flex flex-col justify-between p-2 pointer-events-none opacity-20">
+          <div className="h-36 w-full bg-[#0c1228] rounded-lg border border-[#1c274c] relative overflow-hidden">
+            {/* Horizontal Grid lines (0% - 100%) */}
+            <div className="absolute inset-0 flex flex-col justify-between py-1 px-2 pointer-events-none opacity-25">
               <div className="border-b border-slate-400 w-full text-[9px] text-slate-400">100%</div>
               <div className="border-b border-slate-400 w-full text-[9px] text-slate-400">75%</div>
               <div className="border-b border-slate-400 w-full text-[9px] text-slate-400">50%</div>
               <div className="border-b border-slate-400 w-full text-[9px] text-slate-400">25%</div>
+              <div className="w-full text-[9px] text-slate-400">0%</div>
             </div>
 
             {/* Smooth SVG Spline */}
             <svg
-              viewBox="0 0 1000 140"
-              className="w-full h-full overflow-visible z-10"
+              viewBox="0 0 1000 100"
+              className="absolute inset-0 w-full h-full overflow-visible z-10"
               preserveAspectRatio="none"
             >
               <path
@@ -1415,9 +1413,9 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
 
               {/* Bottom day indicators */}
               <div className="flex items-center justify-between text-[9px] font-mono-num text-slate-500 pt-1 border-t border-[#172042]">
-                <span>{firstDay?.dayNum} {firstDay?.monthName}</span>
-                <span>منتصف الـ 30 يوماً</span>
                 <span className="text-emerald-400 font-bold">{lastDay?.dayNum} {lastDay?.monthName} (اليوم)</span>
+                <span>منتصف الـ 30 يوماً</span>
+                <span>{firstDay?.dayNum} {firstDay?.monthName}</span>
               </div>
             </div>
           </div>
