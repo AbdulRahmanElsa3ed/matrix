@@ -327,7 +327,7 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
 
         {/* Scrollable Progress Chart on Mobile */}
         <div className="overflow-x-auto pb-2 scrollbar-none touch-pan-x">
-          <div className="flex items-end justify-around gap-10 h-44 pt-3 px-1 sm:px-4 min-w-[480px] sm:min-w-full">
+          <div className="flex items-end justify-around gap-3 sm:gap-10 h-44 pt-3 px-1 sm:px-4 min-w-[520px] sm:min-w-full">
             {daysForChart.map((d, index) => {
               const completedCount = d.tasks.filter((t) => t.completed).length;
               const totalCount = d.tasks.length;
@@ -341,7 +341,7 @@ export const TasksView: React.FC<TasksViewProps> = React.memo(({
                 <div
                   key={d.dateKey}
                   onClick={() => setSelectedDayIndex(realIdx)}
-                  className={`flex flex-col items-center flex-1 max-w-[105px] cursor-pointer rounded-lg p-1.5 transition-all duration-200 ${
+                  className={`flex flex-col items-center flex-1 min-w-0 max-w-[90px] sm:max-w-[105px] cursor-pointer rounded-lg p-1.5 transition-all duration-200 ${
                     isDaySelected 
                       ? 'bg-[#1c2852] ring-2 ring-blue-400 shadow-lg shadow-blue-950/50 translate-y-0.5' 
                       : 'hover:bg-[#162044] hover:translate-y-0.5'

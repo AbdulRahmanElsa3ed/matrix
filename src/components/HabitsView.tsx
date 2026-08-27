@@ -535,7 +535,7 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
         )}
 
         {/* Day Bar Column Visuals for 30 continuous days */}
-        <div className="flex items-end justify-between gap-1 sm:gap-1.5 h-36 pt-4 px-1 sm:px-3 overflow-x-auto pb-2 scrollbar-none">
+        <div className="flex items-end justify-between gap-1 sm:gap-1.5 h-28 sm:h-36 pt-3 sm:pt-4 px-1 sm:px-3 overflow-x-auto pb-2 scrollbar-none">
           {dailyStats.map((stat, idx) => {
             const weekIndex = Math.min(4, Math.floor(idx / 7));
             const weekColor = WEEK_COLORS[weekIndex];
@@ -545,12 +545,12 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
             return (
               <div key={idx} className="flex flex-col items-center min-w-[24px] sm:min-w-[32px] flex-1 relative group">
                 {/* Day Number Tooltip / Date */}
-                <span className={`text-[10px] font-mono-num mb-1 font-semibold ${isToday ? 'text-emerald-400 font-bold scale-110' : 'text-slate-400'}`}>
+                <span className={`text-[10px] font-mono-num mb-0.5 sm:mb-1 font-semibold ${isToday ? 'text-emerald-400 font-bold scale-110' : 'text-slate-400'}`}>
                   {stat.dayObj.dayNum}
                 </span>
 
                 {/* Vertical Bar with emerald highlight for today */}
-                <div className={`w-full h-24 rounded-t-md flex items-end overflow-hidden transition-all ${
+                <div className={`w-full h-16 sm:h-24 rounded-t-md flex items-end overflow-hidden transition-all ${
                   isToday
                     ? 'ring-2 ring-emerald-400 bg-[#1e2d5c] shadow-lg shadow-emerald-500/30'
                     : 'bg-[#162145] group-hover:bg-[#1a2752]'
@@ -566,7 +566,7 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
                 </div>
 
                 {/* Percentage Below Bar */}
-                <span className={`text-[10px] font-mono-num font-bold mt-1.5 ${isToday ? 'text-emerald-400 font-extrabold' : 'text-slate-300'}`}>
+                <span className={`text-[10px] font-mono-num font-bold mt-1 sm:mt-1.5 ${isToday ? 'text-emerald-400 font-extrabold' : 'text-slate-300'}`}>
                   {stat.percentage}%
                 </span>
               </div>
@@ -618,18 +618,18 @@ export const HabitsView: React.FC<HabitsViewProps> = React.memo(({
                           <span className="hidden xl:inline">{fullTitle}</span>
                           <span className="hidden md:inline xl:hidden">{mediumTitle}</span>
                           <span className="hidden sm:inline md:hidden">{compactTitle}</span>
-                          <span className="sm:hidden">{miniTitle}</span>
+                          <span className="sm:hidden">{compactTitle}</span>
                         </span>
                       ) : span.count >= 6 ? (
                         <span className="whitespace-nowrap truncate">
                           <span className="hidden md:inline">{mediumTitle}</span>
                           <span className="hidden sm:inline md:hidden">{compactTitle}</span>
-                          <span className="sm:hidden">{miniTitle}</span>
+                          <span className="sm:hidden">{compactTitle}</span>
                         </span>
                       ) : span.count >= 3 ? (
                         <span className="whitespace-nowrap truncate text-[11px] sm:text-xs">
                           <span className="hidden sm:inline">{compactTitle}</span>
-                          <span className="sm:hidden">{miniTitle}</span>
+                          <span className="sm:hidden">{compactTitle}</span>
                         </span>
                       ) : (
                         <span className="whitespace-nowrap font-mono-num text-[11px] font-bold px-0.5">
